@@ -18,6 +18,61 @@ a {
     color: inherit;
 }
 
+
+/* ?BTN start */
+
+.button {
+    position: relative;
+    padding: 17px 36px;
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333D3F;
+  }
+  .prime-btn {
+    background: linear-gradient(95.6deg, #FFE7D9 12.37%, #FFEBB7 35.9%, #EDF493 65.82%, #D2FFAF 88.95%);
+  }
+  .second-btn {
+    background: #fff;
+    margin-left: 20px;
+  }
+  .file-btn {
+    margin: 0;
+    padding: 9px 18px;
+    pointer-events: none;
+  }
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: -3px;
+    z-index: -1;
+    border-radius: 30px; 
+    border: none;
+    background: linear-gradient(95.6deg, #FFE7D9 12.37%, #FFEBB7 35.9%, #EDF493 65.82%, #D2FFAF 88.95%) border-box;
+  }
+  .button:after {
+    content: ">";
+    margin-left: 5px;
+  }
+  .prime-btn:hover {
+    background: #fff;
+  } 
+  .second-btn:hover {
+    background: linear-gradient(95.6deg, #FFE7D9 12.37%, #FFEBB7 35.9%, #EDF493 65.82%, #D2FFAF 88.95%);
+  }
+
+
+
+/* ?BTN-finish */
+
 .container {
     max-width: 1254px;
     margin: 0 auto;
@@ -311,7 +366,7 @@ a {
 
 @media only screen and (max-width: 991px) {
     .header-wrapper .button {
-        margin: 0 50px 0 0;
+        margin: 0 70px 0 0;
     }
     .menubox .button {
         margin: 60px 0 0 0;
@@ -432,3 +487,39 @@ a {
         bottom: -290px;
     }
 }
+
+
+@keyframes scroll {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0)
+    }
+  }
+
+@media (max-width: 991px) {
+    .button {
+        margin: 10px;
+    }
+    .main-title {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 799px) {
+    .main-title {
+        font-size: 36px;
+    }
+    .secondary-title {
+        font-size: 28px;
+    }
+  }
+
+@media (max-width: 526px) {
+    .button {
+        display: block;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+} 
